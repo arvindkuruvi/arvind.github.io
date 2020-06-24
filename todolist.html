@@ -37,7 +37,7 @@
             margin: 10px ;
             text-transform: uppercase;
         }
-        #warnings-less , #warnings-more {display: none;}
+        
         .list-container
         {
             position: absolute;
@@ -45,7 +45,50 @@
             top: 50%;
             transform: translate(-50% , -50%);
         }
+       @media (max-width: 475px)
+       {
+        body{padding: 0;margin: 0;outline: 0;background-color: rgb(236, 143, 229);
+            align-items: center;
+            text-align: center;
+        }
        
+        .container
+        {
+            position: absolute;
+            left: 30%;
+            top: 5%;
+            transform: translate(-30% , -5%);
+        }
+        input{
+            padding: 10px;
+            font-style: italic;
+            border-radius: 10px;
+            border: 1px solid #fff;
+            letter-spacing: 1px;
+            outline: none;
+            width: 200px;
+        }
+
+        .list-container
+        {
+            position: relative;
+            left: 100px;
+            bottom: -400px;
+        }
+
+        
+        li{
+            outline: none;
+            border: none;
+            display: inline-block;
+            max-width: 100px;
+            overflow: hidden;
+            background-color:rgb(134, 231, 235);
+            color: rgb(5, 28, 29);
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+       }
     </style>
 </head>
 <body>
@@ -56,14 +99,14 @@
             <form action="" id="myForm" autocomplete="off">
                 <input type="text" id="myData" placeholder="Enter List" size="50" maxlength="45" required>
                 <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-plus" ></span></button>
-           </form>
-            <div class="list-container">
-                <h3>Need To Do</h3>
-                <ul id="list">
-                    
-                </ul>
-            </div>
-          </div>
+           </form>    
+        </div>
+    </div>
+    <div class="list-container">
+        <h3>Need To Do</h3>
+        <ul id="list">
+            
+        </ul>
     </div>
 <script>
     let myForm = document.getElementById("myForm");
